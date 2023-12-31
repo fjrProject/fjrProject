@@ -13,15 +13,21 @@
 
 .m-fs-7{font-size: .7em;}
 .m-text-grey{color: var(--grey);}
-.h-100vh{
-    height: 100vh;
-    background-color: rebeccapurple;
+.h-100vh{height: 100vh;}
+.button{
+    height: 40px;
+    width: 40px;
+    outline: 7px solid white;
+    cursor: pointer;
 }
 
-.bg-white{background-color: var(--primary-color);}
 .bg-blue{background-color: var(--blue);}
 .bg-dark-blue{background-color: var(--dark-blue);}
 .bg-red{background-color: var(--red);}
 .bg-soft-red{background-color: var(--soft-red);}
 
 .m-fs-title{font-size: 3.4em;}
+
+.hidden{
+    width: 3% !important;
+}
