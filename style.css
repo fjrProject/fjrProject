@@ -26,8 +26,11 @@
 .bg-red{background-color: var(--red);}
 .bg-soft-red{background-color: var(--soft-red);}
 
-.m-fs-title{font-size: 3.4em;}
+.m-fs-title{
+    font-size: 3.4rem;
+}
 
 .hidden{
     width: 3% !important;
 }
+.rotate-180{rotate: 180deg;}
