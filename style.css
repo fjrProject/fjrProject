@@ -1,0 +1,27 @@
+:root{
+    --primary-color : rgb(242, 242, 242);
+    --blue : rgb(0, 90, 255);
+    --dark-blue : rgb(0, 0, 128);
+    --red : rgb(255, 0, 0);
+    --soft-red : rgb(255, 205, 205);
+    --grey : rgb(20, 20, 20);
+}
+
+*{
+    font-family: 'montserrat';
+}
+
+.m-fs-7{font-size: .7em;}
+.m-text-grey{color: var(--grey);}
+.h-100vh{
+    height: 100vh;
+    background-color: rebeccapurple;
+}
+
+.bg-white{background-color: var(--primary-color);}
+.bg-blue{background-color: var(--blue);}
+.bg-dark-blue{background-color: var(--dark-blue);}
+.bg-red{background-color: var(--red);}
+.bg-soft-red{background-color: var(--soft-red);}
+
+.m-fs-title{font-size: 3.4em;}
