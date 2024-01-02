@@ -13,7 +13,6 @@
 }
 
 .text-comic{font-family: 'Comic Sans MS';}
-.h-100vh{height: 100vh;}
 .home{
     background-image: url(IMG/paper2.png);
     background-position: center;
@@ -29,6 +28,7 @@
 .bg-merah{background-color: var(--merah);}
 .bg-oren{background-color: var(--oren);}
 .bg-biru{background-color: var(--biru);}
+
 
 /* animasi */
 .robot-1{
@@ -83,4 +83,51 @@
     49% {transform: translateX(4vw) rotateY(180deg);}
     50% {transform: translateX(3vw) rotateY(0deg);}
     100% {transform: translateX(90vw) rotateY(0deg)}
+}
+
+.daftar-sekarang{
+    animation: daftar-frame 2s infinite;
+}
+@keyframes daftar-frame {
+    0% {transform: scale(1);}
+    50% {transform: scale(1.1);}
+    100% {transform: scale(1);}
+}
+
+.navigasi{
+    position: relative;
+}
+
+@media only screen and (max-width:576px){
+    .navigasi{
+        position: absolute;
+        background-color: rgba(80, 80, 80, 0.814);
+        z-index: 99;
+    }
+    .hide-navigasi{
+        animation: hide-navigasi 1s forwards;
+    }
+    .show-navigasi{
+        animation: show-navigasi 1s forwards;
+    }
+    @keyframes hide-navigasi {
+        from{transform: translateY(0);}
+        to{transform: translateY(-100%);}
+    }
+    @keyframes show-navigasi {
+        from{transform: translateY(-100%);}
+        to{transform: translateY(0);}
+    }
+    .main-home{height: 75vh !important;}
+    .robot-1{
+        animation: robot1-frame 10s linear infinite;
+    }
+    @keyframes robot1-frame {
+        0% {transform: translateX(0) rotateY(180deg);}
+        49% {transform: translateX(300%) rotateY(180deg);}
+        50% {transform: translateX(301%) rotateY(0deg);}
+        100% {transform: translateX(0) rotateY(0deg)}
+    }
+    .navigasi{height: 50vh !important;}
+    .car{width: 10vh !important;}
 }
