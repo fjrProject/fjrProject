@@ -3,8 +3,10 @@
     --hijau-muda : rgb(224, 255, 179);
     --kuning : rgb(248, 242, 0);
     --merah : rgb(255, 114, 114);
+    --merah-muda : rgb(254, 188, 188);
     --merah-tua : rgb(253, 38, 38);
     --oren : rgb(255, 192, 0);
+    --oren-muda : rgb(255, 231, 159);
     --hijau : rgb(146, 208, 80);
     --biru : rgb(0, 112, 192);
 }
@@ -15,6 +17,11 @@
 
 .text-comic{font-family: 'Comic Sans MS';}
 .home{
+    background-image: url(IMG/paper.png);
+    background-position: center;
+    background-size: cover;
+}
+.mentor{
     background-image: url(IMG/paper2.png);
     background-position: center;
     background-size: cover;
@@ -28,10 +35,17 @@
 .bg-hijau{background-color: var(--hijau);}
 .bg-kuning{background-color: var(--kuning);}
 .bg-merah{background-color: var(--merah);}
+.bg-merah-muda{background-color: var(--merah-muda);}
 .bg-merah-tua{background-color: var(--merah-tua);}
 .bg-oren{background-color: var(--oren);}
+.bg-oren-muda{background-color: var(--oren-muda);}
 .bg-biru{background-color: var(--biru);}
 
+.ket-mentor{border-radius: 0 7% 7% 0;}
+.mati-lampu{
+    z-index: 88 !important;
+    background-color: black !important;
+}
 
 /* animasi */
 .robot-1{
