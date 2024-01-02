@@ -18,6 +18,11 @@ document.querySelector(".main-home").addEventListener("click", function(){
 document.querySelector(".cars").addEventListener("click", function(){
     tutup_nav();
 });
+document.querySelectorAll(".nav-section").forEach(element =>{
+    element.addEventListener("click", function(){
+        tutup_nav();
+    })
+});
 
 const rangkaian1_img = document.querySelector(".rangkaian-1 > div > div > img");
 document.querySelector(".tombol-rangkaian-1").addEventListener("click", function(){
