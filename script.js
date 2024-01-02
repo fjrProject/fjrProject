@@ -21,3 +21,16 @@ document.querySelector(".main-home").addEventListener("click", function(){
 document.querySelector(".cars").addEventListener("click", function(){
     if(navigasi.classList.contains("show-navigasi")) navigasi.classList.replace("show-navigasi", "hide-navigasi");
 });
+
+const rangkaian1_img = document.querySelector(".rangkaian-1 > img");
+document.querySelector(".tombol-rangkaian-1").addEventListener("click", function(){
+    if(rangkaian1_img.classList.contains("off")){
+        rangkaian1_img.classList.replace("off", "on");
+        rangkaian1_img.src = "IMG/lamp-on.png";
+    }
+    else if(rangkaian1_img.classList.contains("on")){
+        rangkaian1_img.src = "IMG/lamp-off.png";
+        rangkaian1_img.classList.replace("on", "off");
+    }
+})
+
