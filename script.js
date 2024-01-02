@@ -9,20 +9,17 @@ burger.addEventListener("click", function(){
         });
     }
     else if(navigasi.classList.contains("show-navigasi")){
-        navigasi.classList.replace("show-navigasi", "hide-navigasi");
-        document.querySelectorAll(".burger").forEach(element => {
-            element.classList.replace("bg-light", "bg-black");
-        });
+        tutup_nav();
     }
 });
 document.querySelector(".main-home").addEventListener("click", function(){
-    if(navigasi.classList.contains("show-navigasi")) navigasi.classList.replace("show-navigasi", "hide-navigasi");
+    tutup_nav();
 });
 document.querySelector(".cars").addEventListener("click", function(){
-    if(navigasi.classList.contains("show-navigasi")) navigasi.classList.replace("show-navigasi", "hide-navigasi");
+    tutup_nav();
 });
 
-const rangkaian1_img = document.querySelector(".rangkaian-1 > div > img");
+const rangkaian1_img = document.querySelector(".rangkaian-1 > div > div > img");
 document.querySelector(".tombol-rangkaian-1").addEventListener("click", function(){
     if(rangkaian1_img.classList.contains("off")){
         rangkaian1_img.classList.replace("off", "on");
@@ -34,3 +31,11 @@ document.querySelector(".tombol-rangkaian-1").addEventListener("click", function
     }
 })
 
+function tutup_nav(){
+    if(navigasi.classList.contains("show-navigasi")){
+        navigasi.classList.replace("show-navigasi", "hide-navigasi");
+        document.querySelectorAll(".burger").forEach(element => {
+            element.classList.replace("bg-light", "bg-black");
+        });
+    }
+}
