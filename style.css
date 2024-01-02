@@ -2,7 +2,8 @@
     --krem : rgb(255, 254, 205);
     --hijau-muda : rgb(224, 255, 179);
     --kuning : rgb(248, 242, 0);
-    --merah : rgb(255, 0, 0);
+    --merah : rgb(255, 114, 114);
+    --merah-tua : rgb(253, 38, 38);
     --oren : rgb(255, 192, 0);
     --hijau : rgb(146, 208, 80);
     --biru : rgb(0, 112, 192);
@@ -20,12 +21,14 @@
 }
 
 .border-hitam{border: .3em solid black;}
+.border-bottom{border-bottom: .1em solid black !important;}
 
 .bg-krem{background-color: var(--krem);}
 .bg-hijau-muda{background-color: var(--hijau-muda);}
 .bg-hijau{background-color: var(--hijau);}
 .bg-kuning{background-color: var(--kuning);}
 .bg-merah{background-color: var(--merah);}
+.bg-merah-tua{background-color: var(--merah-tua);}
 .bg-oren{background-color: var(--oren);}
 .bg-biru{background-color: var(--biru);}
 
@@ -89,6 +92,15 @@
     animation: daftar-frame 2s infinite;
 }
 @keyframes daftar-frame {
+    0% {transform: scale(1);}
+    50% {transform: scale(1.1);}
+    100% {transform: scale(1);}
+}
+.tombol-rangkaian-1{
+    cursor: pointer;
+    animation: tombol-rangkaian-1-frame 1s infinite;
+}
+@keyframes tombol-rangkaian-1-frame {
     0% {transform: scale(1);}
     50% {transform: scale(1.1);}
     100% {transform: scale(1);}

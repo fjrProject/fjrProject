@@ -22,7 +22,7 @@ document.querySelector(".cars").addEventListener("click", function(){
     if(navigasi.classList.contains("show-navigasi")) navigasi.classList.replace("show-navigasi", "hide-navigasi");
 });
 
-const rangkaian1_img = document.querySelector(".rangkaian-1 > img");
+const rangkaian1_img = document.querySelector(".rangkaian-1 > div > img");
 document.querySelector(".tombol-rangkaian-1").addEventListener("click", function(){
     if(rangkaian1_img.classList.contains("off")){
         rangkaian1_img.classList.replace("off", "on");
