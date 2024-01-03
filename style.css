@@ -27,8 +27,13 @@
     background-size: cover;
 }
 
+.fs-7{font-size: .8rem;}
+
 .border-hitam{border: .3em solid black;}
 .border-bottom{border-bottom: .1em solid black !important;}
+.border-hijau{border: .3em solid var(--hijau);}
+.border-oren{border: .3em solid var(--oren);}
+.border-merah{border: .3em solid var(--merah);}
 
 .bg-krem{background-color: var(--krem);}
 .bg-hijau-muda{background-color: var(--hijau-muda);}
