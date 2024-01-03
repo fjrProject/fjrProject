@@ -34,6 +34,19 @@ document.querySelector(".tombol-rangkaian-1").addEventListener("click", function
   }
 });
 
+const tombol_maju = document.querySelector(".tombol-maju");
+const tombol_mundur = document.querySelector(".tombol-mundur");
+const roda = document.querySelector(".roda");
+
+tombol_maju.addEventListener("click", function(){
+  if(roda.classList.contains("roda-mundur")) roda.classList.remove("roda-mundur");
+  roda.classList.add("roda-maju");
+})
+tombol_mundur.addEventListener("click", function(){
+  if(roda.classList.contains("roda-maju")) roda.classList.remove("roda-maju");
+  document.querySelector(".roda").classList.add("roda-mundur");
+})
+
 document.querySelector(".home").addEventListener("touchstart", function () {
   document.querySelector(".button-up").classList.add("visually-hidden");
 });

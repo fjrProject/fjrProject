@@ -128,6 +128,22 @@
     position: relative;
 }
 
+.roda-maju{
+    animation: maju 3s infinite linear;
+}
+@keyframes maju {
+    from {transform: rotateZ(0deg);}
+    to {transform: rotateZ(-360deg);}
+}
+
+.roda-mundur{
+    animation: mundur 3s infinite linear;
+}
+@keyframes mundur {
+    from {transform: rotateZ(0deg);}
+    to {transform: rotateZ(360deg);}
+}
+
 @media only screen and (max-width:576px){
     .navigasi{
         position: absolute;
@@ -154,8 +170,8 @@
     }
     @keyframes robot1-frame {
         0% {transform: translateX(0) rotateY(180deg);}
-        49% {transform: translateX(300%) rotateY(180deg);}
-        50% {transform: translateX(301%) rotateY(0deg);}
+        49% {transform: translateX(190%) rotateY(180deg);}
+        50% {transform: translateX(191%) rotateY(0deg);}
         100% {transform: translateX(0) rotateY(0deg)}
     }
     .navigasi{height: 50vh !important;}
