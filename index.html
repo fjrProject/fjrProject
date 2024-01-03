@@ -11,7 +11,7 @@
     <div id="home" class="home overflow-hidden vh-100">
       <div class="container">
         <div class="row">
-          <div class="humberger-menu position-absolute p-0 m-2 end-0 d-flex d-sm-none flex-column justify-content-between" style="width: 30px; height: 30px; cursor: pointer; z-index: 999">
+          <div role="button" tabindex="0" aria-label="navigasi" class="humberger-menu position-absolute p-0 m-2 end-0 d-flex d-sm-none flex-column justify-content-between" style="width: 30px; height: 30px; cursor: pointer; z-index: 999">
             <span class="burger d-inline-block bg-black rounded-pill h-25"></span>
             <span class="burger d-inline-block bg-black rounded-pill h-25"></span>
             <span class="burger d-inline-block bg-black rounded-pill h-25"></span>
@@ -39,7 +39,7 @@
             <h1 class="text-comic mt-4 fw-bold">Rumah Robot adzkia</h1>
             <p class="fs-4 mb-5">Bimbel robotika anak <span class="bg-merah-tua px-1 fw-bold text-light">No.1</span> di Indonesia</p>
             <a href="#" class="daftar-sekarang px-5 d-inline-block text-black text-decoration-none border-hitam bg-biru">
-              <h3 class="my-0 py-1 fs-4 text-light fw-bold text-center">Daftar Sekarang</h3>
+              <p class="my-0 py-1 fs-4 text-light fw-bold text-center">Daftar Sekarang</p>
             </a>
           </div>
           <div class="cars col-12" style="height: 25vh">
@@ -130,7 +130,7 @@
             <div class="col-10 col-sm-6 col-lg-12">
               <div class="position-relative">
                 <div class="position-absolute d-flex justify-content-center end-0 top-0 h-100" style="width: 25%">
-                  <div class="div tombol-rangkaian-1 bg-merah-tua rounded-circle" style="width: 65%; height: 22%; margin-top: 19%"></div>
+                  <div tabindex="0" role="button" aria-label="tombol" class="div tombol-rangkaian-1 bg-merah-tua rounded-circle" style="width: 65%; height: 22%; margin-top: 19%"></div>
                 </div>
                 <img class="off" src="IMG/lamp-off.png" alt="rangkaian lampu mati" style="width: 100%" />
               </div>
@@ -212,8 +212,8 @@
               <div class="col-10 col-sm-6 col-lg-12">
                 <div class="position-relative">
                   <div class="position-absolute d-flex flex-column justify-content-between end-0 bottom-0" style="width: 26%; height: 62%;">
-                    <div class="tombol-maju h-50 w-100"></div>
-                    <div class="tombol-mundur h-50 w-100"></div>
+                    <div tabindex="0" aria-label="maju" role="button" class="tombol-maju h-50 w-100"></div>
+                    <div tabindex="0" aria-label="mundur" role="button" class="tombol-mundur h-50 w-100"></div>
                   </div>
                   <img class="roda position-absolute top-0 start-0" src="IMG/roda.png" alt="roda" style="width: 49%;">
                   <img class="" src="IMG/remote.png" alt="rangkaian roda dan remot" style="width: 100%" />

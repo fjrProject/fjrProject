@@ -2,14 +2,10 @@ const burger = document.querySelector(".humberger-menu");
 const navigasi = document.querySelector(".navigasi");
 
 burger.addEventListener("click", function () {
-  if (navigasi.classList.contains("hide-navigasi")) {
-    navigasi.classList.replace("hide-navigasi", "show-navigasi");
-    document.querySelectorAll(".burger").forEach((element) => {
-      element.classList.replace("bg-black", "bg-light");
-    });
-  } else if (navigasi.classList.contains("show-navigasi")) {
-    tutup_nav();
-  }
+  burger_menu();
+});
+burger.addEventListener("keyup", function (e) {
+  if(e.keyCode == 13) burger_menu();
 });
 document.querySelector(".main-home").addEventListener("click", function () {
   tutup_nav();
@@ -25,13 +21,10 @@ document.querySelectorAll(".nav-section").forEach((element) => {
 
 const rangkaian1_img = document.querySelector(".rangkaian-1 > div > div > img");
 document.querySelector(".tombol-rangkaian-1").addEventListener("click", function () {
-  if (rangkaian1_img.classList.contains("off")) {
-    rangkaian1_img.classList.replace("off", "on");
-    rangkaian1_img.src = "IMG/lamp-on.png";
-  } else if (rangkaian1_img.classList.contains("on")) {
-    rangkaian1_img.src = "IMG/lamp-off.png";
-    rangkaian1_img.classList.replace("on", "off");
-  }
+  nyala_lampu();
+});
+document.querySelector(".tombol-rangkaian-1").addEventListener("keyup", function (e) {
+  if(e.keyCode == 13) nyala_lampu();
 });
 
 const tombol_maju = document.querySelector(".tombol-maju");
@@ -42,7 +35,15 @@ tombol_maju.addEventListener("click", function(){
   if(roda.classList.contains("roda-mundur")) roda.classList.remove("roda-mundur");
   roda.classList.add("roda-maju");
 })
+tombol_maju.addEventListener("keyup", function(){
+  if(roda.classList.contains("roda-mundur")) roda.classList.remove("roda-mundur");
+  roda.classList.add("roda-maju");
+})
 tombol_mundur.addEventListener("click", function(){
+  if(roda.classList.contains("roda-maju")) roda.classList.remove("roda-maju");
+  document.querySelector(".roda").classList.add("roda-mundur");
+})
+tombol_mundur.addEventListener("keyup", function(){
   if(roda.classList.contains("roda-maju")) roda.classList.remove("roda-maju");
   document.querySelector(".roda").classList.add("roda-mundur");
 })
@@ -86,6 +87,27 @@ document.querySelector(".blog").addEventListener("mouseover", function () {
 document.querySelector(".footer").addEventListener("mouseover", function () {
   show_button_up();
 });
+
+function burger_menu(){
+  if (navigasi.classList.contains("hide-navigasi")) {
+    navigasi.classList.replace("hide-navigasi", "show-navigasi");
+    document.querySelectorAll(".burger").forEach((element) => {
+      element.classList.replace("bg-black", "bg-light");
+    });
+  } else if (navigasi.classList.contains("show-navigasi")) {
+    tutup_nav();
+  }
+}
+
+function nyala_lampu(){
+  if (rangkaian1_img.classList.contains("off")) {
+    rangkaian1_img.classList.replace("off", "on");
+    rangkaian1_img.src = "IMG/lamp-on.png";
+  } else if (rangkaian1_img.classList.contains("on")) {
+    rangkaian1_img.src = "IMG/lamp-off.png";
+    rangkaian1_img.classList.replace("on", "off");
+  }
+}
 
 function tutup_nav() {
   if (navigasi.classList.contains("show-navigasi")) {
