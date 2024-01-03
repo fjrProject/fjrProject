@@ -26,14 +26,21 @@
     background-position: center;
     background-size: cover;
 }
+.daftar{
+    background-image: url(IMG/paper.png);
+    background-position: center;
+    background-size: cover;
+}
 
 .fs-7{font-size: .8rem;}
 
 .border-hitam{border: .3em solid black;}
 .border-bottom{border-bottom: .1em solid black !important;}
+.border-merah-tua{border: .3em solid var(--merah-tua);}
 .border-hijau{border: .3em solid var(--hijau);}
 .border-oren{border: .3em solid var(--oren);}
 .border-merah{border: .3em solid var(--merah);}
+.border-biru{border: .3em solid var(--biru);}
 
 .bg-krem{background-color: var(--krem);}
 .bg-hijau-muda{background-color: var(--hijau-muda);}
@@ -45,11 +52,21 @@
 .bg-oren{background-color: var(--oren);}
 .bg-oren-muda{background-color: var(--oren-muda);}
 .bg-biru{background-color: var(--biru);}
+.bg-none{background-color: rgba(240, 248, 255, 0);}
+
+.text-hijau{color: var(--hijau);}
 
 .ket-mentor{border-radius: 0 7% 7% 0;}
 .mati-lampu{
     z-index: 88 !important;
     background-color: black !important;
+}
+
+.daftar-input{
+    border: 0;
+    border-bottom: .2em dotted black;
+    background-color: rgba(0, 0, 139, 0);
+    width: 100%;
 }
 
 /* animasi */
