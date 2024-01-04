@@ -9,6 +9,7 @@
     --oren-muda : rgb(255, 231, 159);
     --hijau : rgb(146, 208, 80);
     --biru : rgb(0, 112, 192);
+    --animate-delay: 0.5s;
 }
 
 *{
@@ -26,7 +27,7 @@
     background-position: center;
     background-size: cover;
 }
-.daftar{
+.daftar-page{
     background-image: url(IMG/paper.png);
     background-position: center;
     background-size: cover;
