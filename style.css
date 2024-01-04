@@ -164,6 +164,9 @@
 }
 
 @media only screen and (max-width:576px){
+    .animate__animated{
+        animation: none !important;
+    }
     .navigasi{
         position: absolute;
         background-color: rgba(80, 80, 80, 0.814);
