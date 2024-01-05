@@ -18,17 +18,17 @@
 
 .text-comic{font-family: 'Comic Sans MS';}
 .home{
-    background-image: url(IMG/paper.png);
+    background-image: url(IMG/paper_result.webp);
     background-position: center;
     background-size: cover;
 }
 .mentor{
-    background-image: url(IMG/paper2.png);
+    background-image: url(IMG/paper2_result.webp);
     background-position: center;
     background-size: cover;
 }
 .daftar-page{
-    background-image: url(IMG/paper.png);
+    background-image: url(IMG/paper_result.webp);
     background-position: center;
     background-size: cover;
 }
