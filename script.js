@@ -5,14 +5,15 @@ burger.addEventListener("click", function () {
   burger_menu();
 });
 burger.addEventListener("keyup", function (e) {
-  if(e.keyCode == 13) burger_menu();
+  if (e.keyCode == 13) burger_menu();
 });
-document.querySelector(".main-home").addEventListener("click", function () {
-  tutup_nav();
+let home_sections = [".main-home", ".cars"];
+home_sections.forEach(function (e) {
+  document.querySelector(e).addEventListener("click", function () {
+    tutup_nav();
+  });
 });
-document.querySelector(".cars").addEventListener("click", function () {
-  tutup_nav();
-});
+
 document.querySelectorAll(".nav-section").forEach((element) => {
   element.addEventListener("click", function () {
     tutup_nav();
@@ -24,71 +25,58 @@ document.querySelector(".tombol-rangkaian-1").addEventListener("click", function
   nyala_lampu();
 });
 document.querySelector(".tombol-rangkaian-1").addEventListener("keyup", function (e) {
-  if(e.keyCode == 13) nyala_lampu();
+  if (e.keyCode == 13) nyala_lampu();
 });
 
 const tombol_maju = document.querySelector(".tombol-maju");
 const tombol_mundur = document.querySelector(".tombol-mundur");
 const roda = document.querySelector(".roda");
 
-tombol_maju.addEventListener("click", function(){
-  if(roda.classList.contains("roda-mundur")) roda.classList.remove("roda-mundur");
-  roda.classList.add("roda-maju");
-})
-tombol_maju.addEventListener("keyup", function(){
-  if(roda.classList.contains("roda-mundur")) roda.classList.remove("roda-mundur");
-  roda.classList.add("roda-maju");
-})
-tombol_mundur.addEventListener("click", function(){
-  if(roda.classList.contains("roda-maju")) roda.classList.remove("roda-maju");
-  document.querySelector(".roda").classList.add("roda-mundur");
-})
-tombol_mundur.addEventListener("keyup", function(){
-  if(roda.classList.contains("roda-maju")) roda.classList.remove("roda-maju");
-  document.querySelector(".roda").classList.add("roda-mundur");
-})
+tombol_maju.addEventListener("click", function () {
+  roda_maju();
+});
+tombol_maju.addEventListener("keyup", function () {
+  roda_maju();
+});
+tombol_mundur.addEventListener("click", function () {
+  roda_mundur();
+});
+tombol_mundur.addEventListener("keyup", function () {
+  roda_mundur();
+});
 
 document.querySelector(".home").addEventListener("touchstart", function () {
   document.querySelector(".button-up").classList.add("visually-hidden");
-});
-
-document.querySelector(".tentang").addEventListener("touchstart", function () {
-  show_button_up();
-});
-document.querySelector(".mentor").addEventListener("touchstart", function () {
-  show_button_up();
-});
-document.querySelector(".daftar").addEventListener("touchstart", function () {
-  show_button_up();
-});
-document.querySelector(".blog").addEventListener("touchstart", function () {
-  show_button_up();
-});
-document.querySelector(".footer").addEventListener("touchstart", function () {
-  show_button_up();
 });
 
 document.querySelector(".home").addEventListener("mouseover", function () {
   document.querySelector(".button-up").classList.add("visually-hidden");
 });
 
-document.querySelector(".tentang").addEventListener("mouseover", function () {
-  show_button_up();
-});
-document.querySelector(".mentor").addEventListener("mouseover", function () {
-  show_button_up();
-});
-document.querySelector(".daftar").addEventListener("mouseover", function () {
-  show_button_up();
-});
-document.querySelector(".blog").addEventListener("mouseover", function () {
-  show_button_up();
-});
-document.querySelector(".footer").addEventListener("mouseover", function () {
-  show_button_up();
+let section = [".tentang", ".mentor", ".daftar", ".blog", ".footer"];
+section.forEach(function (e) {
+  document.querySelector(e).addEventListener("touchstart", function () {
+    show_button_up();
+  });
 });
 
-function burger_menu(){
+section.forEach(function (e) {
+  document.querySelector(e).addEventListener("mouseover", function () {
+    show_button_up();
+  });
+});
+
+function roda_maju() {
+  if (roda.classList.contains("roda-mundur")) roda.classList.remove("roda-mundur");
+  roda.classList.add("roda-maju");
+}
+
+function roda_mundur() {
+  if (roda.classList.contains("roda-maju")) roda.classList.remove("roda-maju");
+  roda.classList.add("roda-mundur");
+}
+
+function burger_menu() {
   if (navigasi.classList.contains("hide-navigasi")) {
     navigasi.classList.replace("hide-navigasi", "show-navigasi");
     document.querySelectorAll(".burger").forEach((element) => {
@@ -99,7 +87,7 @@ function burger_menu(){
   }
 }
 
-function nyala_lampu(){
+function nyala_lampu() {
   if (rangkaian1_img.classList.contains("off")) {
     rangkaian1_img.classList.replace("off", "on");
     rangkaian1_img.src = "IMG/lamp-on.png";
