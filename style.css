@@ -33,6 +33,12 @@
     background-size: cover;
 }
 
+.biografi{
+    background-image: url(IMG/paper3.webp);
+    background-position: center;
+    background-size: cover;
+}
+
 .fs-7{font-size: .8rem;}
 
 .border-hitam{border: .3em solid black;}

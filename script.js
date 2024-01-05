@@ -90,9 +90,9 @@ function burger_menu() {
 function nyala_lampu() {
   if (rangkaian1_img.classList.contains("off")) {
     rangkaian1_img.classList.replace("off", "on");
-    rangkaian1_img.src = "IMG/lamp-on.png";
+    rangkaian1_img.src = "IMG/lamp-on.webp";
   } else if (rangkaian1_img.classList.contains("on")) {
-    rangkaian1_img.src = "IMG/lamp-off.png";
+    rangkaian1_img.src = "IMG/lamp-off.webp";
     rangkaian1_img.classList.replace("on", "off");
   }
 }
