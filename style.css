@@ -1,5 +1,5 @@
 :root{
-    --krem : rgb(255, 254, 205);
+    --abu : rgb(225, 225, 225);
     --hijau-muda : rgb(224, 255, 179);
     --kuning : rgb(248, 242, 0);
     --merah : rgb(255, 114, 114);
@@ -49,7 +49,7 @@
 .border-merah{border: .3em solid var(--merah);}
 .border-biru{border: .3em solid var(--biru);}
 
-.bg-krem{background-color: var(--krem);}
+.bg-abu{background-color: var(--abu);}
 .bg-hijau-muda{background-color: var(--hijau-muda);}
 .bg-hijau{background-color: var(--hijau);}
 .bg-kuning{background-color: var(--kuning);}
